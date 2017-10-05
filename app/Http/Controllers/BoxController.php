@@ -14,7 +14,7 @@ class BoxController extends Controller
      */
     public function index()
     {
-        //
+        return Box::get();
     }
 
     /**
@@ -46,7 +46,7 @@ class BoxController extends Controller
      */
     public function show(Box $box)
     {
-        //
+        return $box;
     }
 
     /**
