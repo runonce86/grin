@@ -19,4 +19,4 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 
 Route::resource('boxes', 'BoxController');
 Route::resource('pots', 'PotController');
-Route::resource('cans', 'WateringCanController');
+Route::resource('wateringCans', 'WateringCanController');
