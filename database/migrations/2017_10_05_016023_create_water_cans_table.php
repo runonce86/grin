@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePotsTable extends Migration
+class CreateWaterCansTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreatePotsTable extends Migration
      */
     public function up()
     {
-        Schema::create('pots', function (Blueprint $table) {
+        Schema::create('watering_cans', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('box_id')->nullable();
-            $table->string('name')->nullable();
-            $table->smallInteger('humidity')->nullable();
+            $table->integer('box_id');
+            $table->smallInteger('level');
             $table->timestamps();
 
             $table->foreign('box_id')->references('id')->on('boxes');
@@ -31,6 +30,6 @@ class CreatePotsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pots');
+        Schema::dropIfExists('watering_cans');
     }
 }

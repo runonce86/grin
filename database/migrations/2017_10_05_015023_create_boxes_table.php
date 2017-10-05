@@ -18,7 +18,6 @@ class CreateBoxesTable extends Migration
             $table->string('name')->nullable();
             $table->smallInteger('temperature')->nullable();
             $table->smallInteger('humidity')->nullable();
-            $table->smallInteger('water')->nullable();
             $table->boolean('lights')->nullable();
             $table->timestamps();
         });
