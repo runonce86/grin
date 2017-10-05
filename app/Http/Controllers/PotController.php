@@ -14,7 +14,7 @@ class PotController extends Controller
      */
     public function index()
     {
-        //
+        return Pot::get();
     }
 
     /**
@@ -46,7 +46,7 @@ class PotController extends Controller
      */
     public function show(Pot $pot)
     {
-        //
+        return $pot;
     }
 
     /**
