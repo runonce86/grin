@@ -14,7 +14,7 @@ class WateringCanController extends Controller
      */
     public function index()
     {
-        //
+        return WateringCan::get();
     }
 
     /**
@@ -46,7 +46,7 @@ class WateringCanController extends Controller
      */
     public function show(WateringCan $wateringCan)
     {
-        //
+        return $wateringCan;
     }
 
     /**
