@@ -30,7 +30,7 @@ class Box extends Model
         return $this->hasMany('App\Models\Pot');
     }
 
-    public function waterTank()
+    public function waterTanks()
     {
         return $this->hasMany('App\Models\WaterTank');
     }
