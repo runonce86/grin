@@ -30,6 +30,6 @@ class CreateWaterTanksTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('watering_cans');
+        Schema::dropIfExists('water_tanks');
     }
 }

@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\WateringCan;
+use App\Models\WaterTank;
 use Illuminate\Http\Request;
 
-class WateringCanController extends Controller
+class WaterTankController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class WateringCanController extends Controller
      */
     public function index()
     {
-        return WateringCan::get();
+        return WaterTank::get();
     }
 
     /**
@@ -41,21 +41,21 @@ class WateringCanController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\WateringCan  $wateringCan
+     * @param  \App\Models\WaterTank  $waterTank
      * @return \Illuminate\Http\Response
      */
-    public function show(WateringCan $wateringCan)
+    public function show(WaterTank $waterTank)
     {
-        return $wateringCan;
+        return $waterTank;
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\WateringCan  $wateringCan
+     * @param  \App\Models\WaterTank  $waterTank
      * @return \Illuminate\Http\Response
      */
-    public function edit(WateringCan $wateringCan)
+    public function edit(WaterTank $waterTank)
     {
         //
     }
@@ -64,10 +64,10 @@ class WateringCanController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\WateringCan  $wateringCan
+     * @param  \App\Models\WaterTank  $waterTank
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, WateringCan $wateringCan)
+    public function update(Request $request, WaterTank $waterTank)
     {
         //
     }
@@ -75,10 +75,10 @@ class WateringCanController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\WateringCan  $wateringCan
+     * @param  \App\Models\WaterTank  $waterTank
      * @return \Illuminate\Http\Response
      */
-    public function destroy(WateringCan $wateringCan)
+    public function destroy(WaterTank $waterTank)
     {
         //
     }

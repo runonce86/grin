@@ -21,7 +21,7 @@ class Box extends Model
 
             // Include this related models by default
             $builder->with('pots')
-                ->with('wateringCans');
+                ->with('waterTanks');
         });
     }
 
