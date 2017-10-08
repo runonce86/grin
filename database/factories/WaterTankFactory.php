@@ -13,7 +13,7 @@ use Faker\Generator as Faker;
 |
 */
 
-$factory->define(App\Models\WateringCan::class, function (Faker $faker) {
+$factory->define(App\Models\WaterTank::class, function (Faker $faker) {
 
     return [
         'level' => $faker->numberBetween(0, 100)

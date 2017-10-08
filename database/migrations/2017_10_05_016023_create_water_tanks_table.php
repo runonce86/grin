@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateWateringCansTable extends Migration
+class CreateWaterTanksTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateWateringCansTable extends Migration
      */
     public function up()
     {
-        Schema::create('watering_cans', function (Blueprint $table) {
+        Schema::create('water_tanks', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('box_id')->nullable();
             $table->smallInteger('level');

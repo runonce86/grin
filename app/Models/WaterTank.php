@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class WateringCan extends Model
+class WaterTank extends Model
 {
     //
 }

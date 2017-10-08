@@ -15,7 +15,7 @@ class BoxesTableSeeder extends Seeder
 
             $box->pots()->saveMany(factory(App\Models\Pot::class, rand(1, 5))->make());
 
-            $box->wateringCans()->saveMany(factory(App\Models\WateringCan::class, rand(1, 3))->make());
+            $box->waterTanks()->saveMany(factory(App\Models\WaterTank::class, rand(1, 3))->make());
         });
     }
 }
