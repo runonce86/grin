@@ -16,7 +16,7 @@ use Faker\Generator as Faker;
 $factory->define(App\Models\Box::class, function (Faker $faker) {
 
     return [
-        'name'        => $faker->name,
+        'foreign_id'  => $faker->randomDigit,
         'temperature' => $faker->numberBetween(0, 80),
         'humidity'    => $faker->numberBetween(0, 95),
         'lights'      => $faker->boolean(50)

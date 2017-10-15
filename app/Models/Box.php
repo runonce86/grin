@@ -7,6 +7,14 @@ use Illuminate\Database\Eloquent\Builder;
 
 class Box extends Model
 {
+
+    /**
+     * The attributes that aren't mass assignable.
+     *
+     * @var array
+     */
+    protected $guarded = ['user_id'];
+
     /**
      * The "booting" method of the model.
      *
@@ -33,5 +41,10 @@ class Box extends Model
     public function waterTanks()
     {
         return $this->hasMany('App\Models\WaterTank');
+    }
+
+    public function user()
+    {
+        return $this->belongsTo('App\Models\User');
     }
 }
