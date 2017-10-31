@@ -24,26 +24,30 @@ class BoxTest extends TestCase
 
         $user->boxes()->save($box);
 
-        $response = $this->json('GET', '/api/boxes/1');
+        $response = $this
+            ->actingAs($user)
+            ->json('GET', '/api/boxes/1');
 
         $response->assertStatus(200);
     }
 
     /**
-     * Create a single box.
+     * Store a single box.
      *
      * @return void
      */
-    public function testCreate()
+    public function testStore()
     {
         $user = factory(User::class)->create();
 
         $box = factory(Box::class)->make();
 
-        $response = $this->actingAs($user)
+        $response = $this
+            ->actingAs($user)
             ->json('POST', '/api/boxes', $box->toArray());
 
-        $response->assertStatus(200)
+        $response
+            ->assertStatus(200)
             ->assertJson([
                 'foreign_id' => $box->foreign_id
             ]);
