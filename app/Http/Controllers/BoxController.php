@@ -4,9 +4,20 @@ namespace App\Http\Controllers;
 
 use App\Models\Box;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class BoxController extends Controller
 {
+    /**
+     * Create a new AuthController instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        $this->middleware('auth:api', ['except' => ['login']]);
+    }
+
     /**
      * Display a listing of the resource.
      *
@@ -35,7 +46,15 @@ class BoxController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $user = Auth::user();
+
+        $box = Box::make($request->all());
+
+        $box->user_id = $user->id;
+
+        $box->save();
+
+        return $box;
     }
 
     /**
