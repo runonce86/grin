@@ -26,7 +26,3 @@ Route::group([
     Route::post('me',      'AuthController@me');
 
 });
-
-Route::resource('boxes', 'BoxController');
-Route::resource('pots', 'PotController');
-Route::resource('waterTanks', 'WaterTankController');
